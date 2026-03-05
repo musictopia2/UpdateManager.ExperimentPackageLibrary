@@ -19,7 +19,7 @@ public class ImportProcesses
             }
             if (editor.HasPostBuildTarget())
             {
-                Console.WriteLine("This already has a post build program.  Experiments can't have more than one.  Maybe already done";
+                Console.WriteLine("This already has a post build program.  Experiments can't have more than one.  Maybe already done");
                 return;
             }
             string path = bb1.Configuration.ExperimentPostBuildFeedProcessorProgram;
