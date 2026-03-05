@@ -1,7 +1,7 @@
 ﻿namespace UpdateManager.ExperimentPackageLibrary;
 public class FileExperimentContext : IExperimentContext
 {
-    Task<bool> IExperimentContext.AddExperimentAsync(BuildHookArgs args)
+    Task IExperimentContext.AddExperimentAsync(BuildHookArgs args)
     {
         throw new NotImplementedException();
     }
