@@ -41,7 +41,7 @@ public class UpdateExperimentClass(IExperimentContext context, INugetPacker pack
         string nugetFile = ff1.FullFile(files.Single());
         //its no longer local.
 
-        bool uploaded = await uploader.UploadNugetPackageAsync(nugetFile);
+        bool uploaded = await uploader.UploadNugetPackageAsync(Path.Combine(experiment.NugetPackagePath, nugetFile));
         if (uploaded == false)
         {
             throw new CustomArgumentException("Failed to upload package to desired server");
