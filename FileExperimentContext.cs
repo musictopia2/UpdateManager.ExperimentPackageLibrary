@@ -25,7 +25,7 @@ public class FileExperimentContext : IExperimentContext
             //no archived locations yet.
             existing.NugetPackagePath = nugetPath;
             packages.Add(existing);
-            await js1.SaveObjectAsync(_packagePath, existing);
+            await js1.SaveObjectAsync(_packagePath, packages);
 
             return existing; //this means approved because its brand new.
         }
@@ -42,7 +42,7 @@ public class FileExperimentContext : IExperimentContext
             existing.NugetPackagePath = nugetPath;
         }
         existing.Version.IncrementMinorVersion();
-        await js1.SaveObjectAsync(_packagePath, existing);
+        await js1.SaveObjectAsync(_packagePath, packages);
         return existing;
     }
 }
