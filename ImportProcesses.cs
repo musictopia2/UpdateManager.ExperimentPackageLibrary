@@ -6,7 +6,11 @@ public class ImportProcesses
         try
         {
             CustomBasicException.ThrowIfNull(bb1.Configuration);
-            CsProjEditor editor = new(build.ProjectFileName);
+
+            string csprojPath =
+                csprojPath = Path.Combine(build.ProjectDir, build.ProjectFileName);
+
+            CsProjEditor editor = new(csprojPath);
             if (editor.GetFeedType() is not null)
             {
                 Console.WriteLine("This was already a local or public feed");
