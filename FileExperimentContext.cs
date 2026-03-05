@@ -41,7 +41,7 @@ public class FileExperimentContext : IExperimentContext
             existing.CsProjPath = csProj;
             existing.NugetPackagePath = nugetPath;
         }
-        existing.Version.IncrementMinorVersion();
+        existing.Version = existing.Version.IncrementMinorVersion();
         await js1.SaveObjectAsync(_packagePath, packages);
         return existing;
     }
