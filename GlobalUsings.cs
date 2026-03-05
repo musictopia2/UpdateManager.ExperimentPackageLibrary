@@ -1,0 +1,10 @@
+﻿global using UpdateManager.CoreLibrary.Utilities;
+global using UpdateManager.CoreLibrary.Interfaces;
+global using CommonBasicLibraries.CollectionClasses;
+global using Microsoft.Extensions.DependencyInjection;
+global using UpdateManager.CoreLibrary.NugetHelpers;
+global using CommonBasicLibraries.AdvancedGeneralFunctionsAndProcesses.BuildHooks;
+global using UpdateManager.CoreLibrary.ProjectFileHelpers;
+global using bb1 = CommonBasicLibraries.BasicDataSettingsAndProcesses.BasicDataFunctions;
+global using CommonBasicLibraries.AdvancedGeneralFunctionsAndProcesses.BasicExtensions;
+global using CommonBasicLibraries.BasicDataSettingsAndProcesses;
